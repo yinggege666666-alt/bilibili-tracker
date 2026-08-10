@@ -1,25 +1,25 @@
 {
-    "updatedAt":  "2026-08-11 02:00",
+    "updatedAt":  "2026-08-11 05:00",
     "videos":  [
                    {
                        "bvid":  "BV1o9uy6jEyM",
                        "title":  "8月更新【秋叶ComfyUI-VX中文版】全面支持中文提示词输入！Win+Mac一键安装，支持20304050显卡解压即用，附comfyui本地部署一键安装包",
-                       "view":  5883,
-                       "reply":  116,
-                       "like":  233,
-                       "coin":  430,
-                       "favorite":  247,
+                       "view":  7826,
+                       "reply":  121,
+                       "like":  257,
+                       "coin":  480,
+                       "favorite":  273,
                        "share":  21,
-                       "hourlyView":  24,
-                       "todayView":  28,
+                       "hourlyView":  1943,
+                       "todayView":  1971,
                        "publishedDays":  3,
                        "publishDate":  "2026-08-09",
-                       "dailyAvg":  1961,
-                       "replyRate":  1.97,
-                       "likeRate":  3.96,
-                       "coinRate":  7.31,
-                       "favoriteRate":  4.2,
-                       "shareRate":  0.36,
+                       "dailyAvg":  2609,
+                       "replyRate":  1.55,
+                       "likeRate":  3.28,
+                       "coinRate":  6.13,
+                       "favoriteRate":  3.49,
+                       "shareRate":  0.27,
                        "history":  [
                                        {
                                            "time":  "2026-08-10 00:00",
@@ -56,27 +56,36 @@
                                            "coin":  430,
                                            "favorite":  247,
                                            "share":  21
+                                       },
+                                       {
+                                           "time":  "2026-08-11 05:00",
+                                           "view":  7826,
+                                           "reply":  121,
+                                           "like":  257,
+                                           "coin":  480,
+                                           "favorite":  273,
+                                           "share":  21
                                        }
                                    ]
                    },
                    {
                        "bvid":  "BV1eSMC6TENM",
                        "title":  "【秋叶ComfyUI】秋叶最新发布！ComfyUI 旗舰中文版整合包来了！全中文界面支持中文提示词，Win+Mac一键下载安装教程（附新Comfyui整合包）",
-                       "view":  14274,
+                       "view":  14288,
                        "reply":  292,
-                       "like":  1211,
-                       "coin":  2275,
-                       "favorite":  1221,
+                       "like":  1237,
+                       "coin":  2319,
+                       "favorite":  1247,
                        "share":  163,
                        "hourlyView":  14,
-                       "todayView":  15,
+                       "todayView":  29,
                        "publishedDays":  7,
                        "publishDate":  "2026-08-05",
-                       "dailyAvg":  2039,
-                       "replyRate":  2.05,
-                       "likeRate":  8.48,
-                       "coinRate":  15.94,
-                       "favoriteRate":  8.55,
+                       "dailyAvg":  2041,
+                       "replyRate":  2.04,
+                       "likeRate":  8.66,
+                       "coinRate":  16.23,
+                       "favoriteRate":  8.73,
                        "shareRate":  1.14,
                        "history":  [
                                        {
@@ -114,28 +123,37 @@
                                            "coin":  2275,
                                            "favorite":  1221,
                                            "share":  163
+                                       },
+                                       {
+                                           "time":  "2026-08-11 05:00",
+                                           "view":  14288,
+                                           "reply":  292,
+                                           "like":  1237,
+                                           "coin":  2319,
+                                           "favorite":  1247,
+                                           "share":  163
                                        }
                                    ]
                    },
                    {
                        "bvid":  "BV1QZM16zEMK",
                        "title":  "8月最新【秋叶ComfyUI-VX中文版】全中文界面支持中文提示词！Win+Mac一键安装，支持20304050显卡解压即用，附comfyui本地部署一键安装包",
-                       "view":  24766,
-                       "reply":  1214,
-                       "like":  1565,
-                       "coin":  2464,
-                       "favorite":  1789,
+                       "view":  25672,
+                       "reply":  1221,
+                       "like":  1597,
+                       "coin":  2513,
+                       "favorite":  1833,
                        "share":  208,
-                       "hourlyView":  465,
-                       "todayView":  619,
+                       "hourlyView":  906,
+                       "todayView":  1525,
                        "publishedDays":  6,
                        "publishDate":  "2026-08-06",
-                       "dailyAvg":  4128,
-                       "replyRate":  4.9,
-                       "likeRate":  6.32,
-                       "coinRate":  9.95,
-                       "favoriteRate":  7.22,
-                       "shareRate":  0.84,
+                       "dailyAvg":  4279,
+                       "replyRate":  4.76,
+                       "likeRate":  6.22,
+                       "coinRate":  9.79,
+                       "favoriteRate":  7.14,
+                       "shareRate":  0.81,
                        "history":  [
                                        {
                                            "time":  "2026-08-10 00:00",
@@ -172,20 +190,29 @@
                                            "coin":  2464,
                                            "favorite":  1789,
                                            "share":  208
+                                       },
+                                       {
+                                           "time":  "2026-08-11 05:00",
+                                           "view":  25672,
+                                           "reply":  1221,
+                                           "like":  1597,
+                                           "coin":  2513,
+                                           "favorite":  1833,
+                                           "share":  208
                                        }
                                    ]
                    },
                    {
                        "bvid":  "BV1GFVf6sECB",
                        "title":  "7月最新【秋叶ComfyUI-v10中文版】！全中文界面支持中文提示词！支持50 40 30系显卡，Win+Mac一键安装，解压即用（附Comfyui整合包）",
-                       "view":  376117,
-                       "reply":  19360,
-                       "like":  13704,
-                       "coin":  22099,
-                       "favorite":  15901,
+                       "view":  376128,
+                       "reply":  19361,
+                       "like":  13705,
+                       "coin":  22101,
+                       "favorite":  15903,
                        "share":  2299,
-                       "hourlyView":  174,
-                       "todayView":  213,
+                       "hourlyView":  11,
+                       "todayView":  224,
                        "publishedDays":  72,
                        "publishDate":  "2026-06-01",
                        "dailyAvg":  5224,
@@ -230,28 +257,37 @@
                                            "coin":  22099,
                                            "favorite":  15901,
                                            "share":  2299
+                                       },
+                                       {
+                                           "time":  "2026-08-11 05:00",
+                                           "view":  376128,
+                                           "reply":  19361,
+                                           "like":  13705,
+                                           "coin":  22101,
+                                           "favorite":  15903,
+                                           "share":  2299
                                        }
                                    ]
                    },
                    {
                        "bvid":  "BV1NfKw6AEeo",
                        "title":  "8月【秋叶ComfyUI桌面版】全新发布！ai绘画ai视频一键生成，适配20/30/40/50系显卡，Win+Mac一键安装解压即用无私传递（附整合包+工作流）",
-                       "view":  66907,
+                       "view":  67926,
                        "reply":  1407,
-                       "like":  2086,
-                       "coin":  3346,
-                       "favorite":  2419,
+                       "like":  2109,
+                       "coin":  3390,
+                       "favorite":  2445,
                        "share":  659,
-                       "hourlyView":  11,
-                       "todayView":  15,
+                       "hourlyView":  1019,
+                       "todayView":  1034,
                        "publishedDays":  25,
                        "publishDate":  "2026-07-18",
-                       "dailyAvg":  2676,
-                       "replyRate":  2.1,
-                       "likeRate":  3.12,
-                       "coinRate":  5,
-                       "favoriteRate":  3.62,
-                       "shareRate":  0.98,
+                       "dailyAvg":  2717,
+                       "replyRate":  2.07,
+                       "likeRate":  3.1,
+                       "coinRate":  4.99,
+                       "favoriteRate":  3.6,
+                       "shareRate":  0.97,
                        "history":  [
                                        {
                                            "time":  "2026-08-10 00:00",
@@ -288,23 +324,32 @@
                                            "coin":  3346,
                                            "favorite":  2419,
                                            "share":  659
+                                       },
+                                       {
+                                           "time":  "2026-08-11 05:00",
+                                           "view":  67926,
+                                           "reply":  1407,
+                                           "like":  2109,
+                                           "coin":  3390,
+                                           "favorite":  2445,
+                                           "share":  659
                                        }
                                    ]
                    },
                    {
                        "bvid":  "BV1Tjgk6fEQw",
                        "title":  "【ComfyUI-模型】音画同步，AI视频一键生成，8g显存也能玩。LTX2.3模型完全体！从入门到进阶,镜头运镜,提示词工具。一键安装，点开即用（附软件模型）",
-                       "view":  61504,
-                       "reply":  1627,
-                       "like":  2809,
-                       "coin":  4024,
-                       "favorite":  3217,
+                       "view":  61541,
+                       "reply":  1628,
+                       "like":  2810,
+                       "coin":  4026,
+                       "favorite":  3221,
                        "share":  733,
-                       "hourlyView":  42,
-                       "todayView":  64,
+                       "hourlyView":  37,
+                       "todayView":  101,
                        "publishedDays":  21,
                        "publishDate":  "2026-07-22",
-                       "dailyAvg":  2929,
+                       "dailyAvg":  2931,
                        "replyRate":  2.65,
                        "likeRate":  4.57,
                        "coinRate":  6.54,
@@ -346,23 +391,32 @@
                                            "coin":  4024,
                                            "favorite":  3217,
                                            "share":  733
+                                       },
+                                       {
+                                           "time":  "2026-08-11 05:00",
+                                           "view":  61541,
+                                           "reply":  1628,
+                                           "like":  2810,
+                                           "coin":  4026,
+                                           "favorite":  3221,
+                                           "share":  733
                                        }
                                    ]
                    },
                    {
                        "bvid":  "BV1wfT76GEME",
                        "title":  "【ComfyUI-V13旗舰版】秋叶最新教程发布！全中文界面，中文提示词！全面适配50 40 30系显卡，Win+Mac一键安装，解压即用，（附整合包+工作流）",
-                       "view":  158569,
-                       "reply":  4866,
-                       "like":  5743,
-                       "coin":  8961,
-                       "favorite":  6880,
+                       "view":  158615,
+                       "reply":  4867,
+                       "like":  5744,
+                       "coin":  8963,
+                       "favorite":  6882,
                        "share":  1657,
-                       "hourlyView":  30,
-                       "todayView":  38,
+                       "hourlyView":  46,
+                       "todayView":  84,
                        "publishedDays":  41,
                        "publishDate":  "2026-07-02",
-                       "dailyAvg":  3868,
+                       "dailyAvg":  3869,
                        "replyRate":  3.07,
                        "likeRate":  3.62,
                        "coinRate":  5.65,
@@ -404,20 +458,29 @@
                                            "coin":  8961,
                                            "favorite":  6880,
                                            "share":  1657
+                                       },
+                                       {
+                                           "time":  "2026-08-11 05:00",
+                                           "view":  158615,
+                                           "reply":  4867,
+                                           "like":  5744,
+                                           "coin":  8963,
+                                           "favorite":  6882,
+                                           "share":  1657
                                        }
                                    ]
                    },
                    {
                        "bvid":  "BV18egC6NEPm",
                        "title":  "【ComfyUI最强视频模型】LTX2.3最新NSFW破限制视频/漫剧一键整合包！无视审查！低至8G显存运行！LTX导演台、多参生视频、Scail2动作迁移等",
-                       "view":  61943,
+                       "view":  61944,
                        "reply":  1467,
                        "like":  1563,
                        "coin":  2800,
                        "favorite":  1598,
                        "share":  670,
-                       "hourlyView":  4,
-                       "todayView":  4,
+                       "hourlyView":  1,
+                       "todayView":  5,
                        "publishedDays":  21,
                        "publishDate":  "2026-07-22",
                        "dailyAvg":  2950,
@@ -462,6 +525,15 @@
                                            "coin":  2800,
                                            "favorite":  1598,
                                            "share":  670
+                                       },
+                                       {
+                                           "time":  "2026-08-11 05:00",
+                                           "view":  61944,
+                                           "reply":  1467,
+                                           "like":  1563,
+                                           "coin":  2800,
+                                           "favorite":  1598,
+                                           "share":  670
                                        }
                                    ]
                    },
@@ -474,7 +546,7 @@
                        "coin":  1626,
                        "favorite":  925,
                        "share":  363,
-                       "hourlyView":  1,
+                       "hourlyView":  0,
                        "todayView":  1,
                        "publishedDays":  14,
                        "publishDate":  "2026-07-29",
@@ -514,6 +586,15 @@
                                        },
                                        {
                                            "time":  "2026-08-11 02:00",
+                                           "view":  47397,
+                                           "reply":  624,
+                                           "like":  901,
+                                           "coin":  1626,
+                                           "favorite":  925,
+                                           "share":  363
+                                       },
+                                       {
+                                           "time":  "2026-08-11 05:00",
                                            "view":  47397,
                                            "reply":  624,
                                            "like":  901,
@@ -578,6 +659,15 @@
                                            "coin":  592,
                                            "favorite":  392,
                                            "share":  376
+                                       },
+                                       {
+                                           "time":  "2026-08-11 05:00",
+                                           "view":  84375,
+                                           "reply":  433,
+                                           "like":  386,
+                                           "coin":  592,
+                                           "favorite":  392,
+                                           "share":  376
                                        }
                                    ]
                    },
@@ -590,7 +680,7 @@
                        "coin":  147,
                        "favorite":  75,
                        "share":  102,
-                       "hourlyView":  1,
+                       "hourlyView":  0,
                        "todayView":  1,
                        "publishedDays":  8,
                        "publishDate":  "2026-08-04",
@@ -636,26 +726,35 @@
                                            "coin":  147,
                                            "favorite":  75,
                                            "share":  102
+                                       },
+                                       {
+                                           "time":  "2026-08-11 05:00",
+                                           "view":  11477,
+                                           "reply":  11,
+                                           "like":  79,
+                                           "coin":  147,
+                                           "favorite":  75,
+                                           "share":  102
                                        }
                                    ]
                    },
                    {
                        "bvid":  "BV15AdgB4En4",
                        "title":  "7月24日【 秋叶ComfyUI中文版】重磅更新！！ComfyUI 旗舰整合包来了！，Win+Mac一键下载安装无私分享（附Comfyui整合包）",
-                       "view":  120828,
+                       "view":  120830,
                        "reply":  5480,
                        "like":  11573,
                        "coin":  20136,
                        "favorite":  13037,
                        "share":  1199,
-                       "hourlyView":  0,
-                       "todayView":  1,
+                       "hourlyView":  2,
+                       "todayView":  3,
                        "publishedDays":  96,
                        "publishDate":  "2026-05-08",
                        "dailyAvg":  1259,
                        "replyRate":  4.54,
                        "likeRate":  9.58,
-                       "coinRate":  16.67,
+                       "coinRate":  16.66,
                        "favoriteRate":  10.79,
                        "shareRate":  0.99,
                        "history":  [
@@ -689,6 +788,15 @@
                                        {
                                            "time":  "2026-08-11 02:00",
                                            "view":  120828,
+                                           "reply":  5480,
+                                           "like":  11573,
+                                           "coin":  20136,
+                                           "favorite":  13037,
+                                           "share":  1199
+                                       },
+                                       {
+                                           "time":  "2026-08-11 05:00",
+                                           "view":  120830,
                                            "reply":  5480,
                                            "like":  11573,
                                            "coin":  20136,
@@ -752,6 +860,15 @@
                                            "coin":  399,
                                            "favorite":  274,
                                            "share":  231
+                                       },
+                                       {
+                                           "time":  "2026-08-11 05:00",
+                                           "view":  55124,
+                                           "reply":  233,
+                                           "like":  246,
+                                           "coin":  399,
+                                           "favorite":  274,
+                                           "share":  231
                                        }
                                    ]
                    },
@@ -804,6 +921,15 @@
                                        },
                                        {
                                            "time":  "2026-08-11 02:00",
+                                           "view":  51311,
+                                           "reply":  153,
+                                           "like":  157,
+                                           "coin":  262,
+                                           "favorite":  156,
+                                           "share":  134
+                                       },
+                                       {
+                                           "time":  "2026-08-11 05:00",
                                            "view":  51311,
                                            "reply":  153,
                                            "like":  157,
