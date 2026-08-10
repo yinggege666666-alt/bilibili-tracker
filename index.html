@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>B站数据看板</title>
+<style>
+  :root {
+    --bg: #f3f6f7;
+    --panel: #ffffff;
+    --line: #dde5e8;
+    --text: #1d2730;
+    --muted: #71808a;
+    --accent: #0f9d8f;
+    --accent-soft: #e7f6f3;
+    --warn: #d97706;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Microsoft YaHei", "Segoe UI", system-ui, sans-serif;
+  }
+  .topbar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 56px;
+    padding: 0 20px;
+    background: var(--panel);
+    border-bottom: 1px solid var(--line);
+  }
+  .brand { font-size: 18px; font-weight: 700; letter-spacing: 0; }
+  .brand span { color: var(--accent); }
+  .status {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--muted);
+    font-size: 13px;
+  }
+  .status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-soft);
+  }
+  main { max-width: 1480px; margin: 0 auto; padding: 16px 20px 32px; }
+  .summary {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+  }
+  .card {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 12px 14px;
+  }
+  .card-label { font-size: 12px; color: var(--muted); margin-bottom: 6px; }
+  .card-value {
+    font-size: 20px;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+  }
+  .controls { display: flex; gap: 10px; margin: 14px 0; }
+  .controls input {
+    flex: 1;
+    min-width: 0;
+    height: 36px;
+    padding: 0 12px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--panel);
+    color: var(--text);
+    font-size: 13px;
+    outline: none;
+  }
+  .controls input:focus { border-color: var(--accent); }
+  .controls select {
+    height: 36px;
+    padding: 0 10px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--panel);
+    color: var(--text);
+    font-size: 13px;
+    outline: none;
+  }
+  .table-wrap {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    overflow: auto;
+    max-height: 72vh;
+  }
+  table { width: 100%; border-collapse: collapse; min-width: 1320px; }
+  thead th {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background: #f8fafb;
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 600;
+    text-align: right;
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--line);
+    white-space: nowrap;
+  }
+  thead th:first-child,
+  thead th:nth-child(2),
+  thead th:nth-child(3) { text-align: left; }
+  tbody td {
+    padding: 9px 12px;
+    border-bottom: 1px solid #edf2f4;
+    font-size: 13px;
+    font-variant-numeric: tabular-nums;
+    text-align: right;
+    white-space: nowrap;
+  }
+  tbody tr:last-child td { border-bottom: none; }
+  tbody tr { cursor: pointer; }
+  tbody tr:hover { background: #f7fbfa; }
+  tbody tr.active { background: var(--accent-soft); }
+  .idx { color: var(--muted); }
+  .bv { font-family: Consolas, monospace; }
+  .title-cell {
+    max-width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: left;
+  }
+  .empty { padding: 40px; text-align: center; color: var(--muted); }
+  .chart-panel {
+    margin-top: 14px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 14px 16px 10px;
+  }
+  .chart-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+  }
+  .chart-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+  }
+  .segmented {
+    display: inline-flex;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    overflow: hidden;
+    background: #f8fafb;
+  }
+  .segment-btn {
+    border: none;
+    background: transparent;
+    color: var(--muted);
+    font-size: 13px;
+    padding: 7px 12px;
+    cursor: pointer;
+  }
+  .segment-btn.active {
+    background: var(--accent);
+    color: #ffffff;
+    font-weight: 600;
+  }
+  .chart-controls select {
+    height: 32px;
+    padding: 0 10px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--panel);
+    color: var(--text);
+    font-size: 13px;
+    outline: none;
+  }
+  .chart-title { font-size: 15px; font-weight: 700; }
+  .chart-video {
+    color: var(--muted);
+    font-size: 12px;
+    max-width: 70%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  canvas { width: 100%; height: 280px; display: block; }
+  @media (max-width: 720px) {
+    .topbar { padding: 0 12px; }
+    .brand { font-size: 15px; }
+    .status span:last-child { display: none; }
+    main { padding: 12px; }
+    .summary { grid-template-columns: repeat(2, 1fr); }
+    .controls { flex-wrap: wrap; }
+    .controls input { min-width: 100%; }
+    .chart-video { max-width: 100%; }
+  }
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">B站<span>数据看板</span></div>
+  <div class="status"><span class="status-dot"></span><span id="updatedAt">加载中</span><span>每小时自动更新</span></div>
+</header>
+<main>
+  <section class="summary" id="summary"></section>
+  <section class="controls">
+    <input id="search" type="search" placeholder="搜索BV号或标题" autocomplete="off">
+    <select id="sort"></select>
+  </section>
+  <section class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>BV号</th>
+          <th>标题</th>
+          <th>播放</th>
+          <th>评论</th>
+          <th>点赞</th>
+          <th>投币</th>
+          <th>收藏</th>
+          <th>分享</th>
+          <th>本小时播放</th>
+          <th>今日播放</th>
+          <th>已发布天数</th>
+          <th>日均播放</th>
+          <th>评论率</th>
+          <th>点赞率</th>
+          <th>投币率</th>
+          <th>收藏率</th>
+          <th>分享率</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody"></tbody>
+    </table>
+  </section>
+  <section class="chart-panel">
+    <div class="chart-head">
+      <span class="chart-title" id="chartTitle">播放趋势</span>
+      <span class="chart-video" id="chartVideo"></span>
+    </div>
+    <div class="chart-controls">
+      <div class="segmented" id="chartMode"></div>
+      <select id="chartMetric"></select>
+    </div>
+    <canvas id="chart"></canvas>
+  </section>
+</main>
+<script>
+(() => {
+  'use strict';
+
+  const CHART_MODES = [
+    { key: 'delta', label: '每小时新增' },
+    { key: 'rate', label: '每小时趋势' },
+    { key: 'daily', label: '每日趋势' }
+  ];
+
+  const DELTA_METRICS = [
+    { key: 'view', label: '播放' },
+    { key: 'reply', label: '评论' },
+    { key: 'like', label: '点赞' },
+    { key: 'coin', label: '投币' },
+    { key: 'favorite', label: '收藏' },
+    { key: 'share', label: '分享' }
+  ];
+
+  const RATE_METRICS = [
+    { key: 'replyRate', label: '评论率' },
+    { key: 'likeRate', label: '点赞率' },
+    { key: 'coinRate', label: '投币率' },
+    { key: 'favoriteRate', label: '收藏率' },
+    { key: 'shareRate', label: '分享率' }
+  ];
+
+  const DAILY_METRICS = [
+    { key: 'dailyAvg', label: '日均播放' }
+  ];
+
+  const SORTS = [
+    { key: 'default', label: '默认顺序' },
+    { key: 'view', label: '按播放' },
+    { key: 'reply', label: '按评论' },
+    { key: 'like', label: '按点赞' },
+    { key: 'coin', label: '按投币' },
+    { key: 'favorite', label: '按收藏' },
+    { key: 'share', label: '按分享' },
+    { key: 'hourlyView', label: '按本小时播放' },
+    { key: 'todayView', label: '按今日播放' },
+    { key: 'publishedDays', label: '按已发布天数' },
+    { key: 'dailyAvg', label: '按日均播放' },
+    { key: 'replyRate', label: '按评论率' },
+    { key: 'likeRate', label: '按点赞率' },
+    { key: 'coinRate', label: '按投币率' },
+    { key: 'favoriteRate', label: '按收藏率' },
+    { key: 'shareRate', label: '按分享率' }
+  ];
+
+  const state = {
+    data: null,
+    selected: null,
+    sort: 'default',
+    chartMode: 'delta',
+    chartMetric: 'view',
+    search: ''
+  };
+
+  const $ = id => document.getElementById(id);
+  const fmt = n => n === null || n === undefined ? '-' : new Intl.NumberFormat('zh-CN', { maximumFractionDigits: 0 }).format(n);
+  const fmtPct = n => n === null || n === undefined ? '-' : Number(n).toFixed(2) + '%';
+  const fmtAxis = n => new Intl.NumberFormat('zh-CN', { notation: 'compact', maximumFractionDigits: 1 }).format(n);
+  const fmtAxisValue = (n, isRate) => isRate ? Number(n).toFixed(2) : fmtAxis(n);
+  const sum = (arr, key) => arr.reduce((acc, item) => acc + (Number(item[key]) || 0), 0);
+
+  function escapeHtml(s) {
+    return String(s).replace(/[&<>"']/g, c => ({
+      '&': '&amp;',
+      '<': '&lt;',
+      '>': '&gt;',
+      '"': '&quot;',
+      "'": '&#39;'
+    }[c]));
+  }
+
+  function getChartMetrics() {
+    if (state.chartMode === 'rate') return RATE_METRICS;
+    if (state.chartMode === 'daily') return DAILY_METRICS;
+    return DELTA_METRICS;
+  }
+
+  function populateChartMetrics() {
+    const metrics = getChartMetrics();
+    const select = $('chartMetric');
+    select.innerHTML = '';
+    metrics.forEach(m => {
+      const o = document.createElement('option');
+      o.value = m.key;
+      o.textContent = m.label;
+      select.appendChild(o);
+    });
+    if (!metrics.some(m => m.key === state.chartMetric)) {
+      state.chartMetric = metrics[0].key;
+    }
+    select.value = state.chartMetric;
+  }
+
+  function updateModeButtons() {
+    document.querySelectorAll('.segment-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.mode === state.chartMode);
+    });
+  }
+
+  function initChartControls() {
+    const modeBox = $('chartMode');
+    CHART_MODES.forEach(mode => {
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'segment-btn' + (mode.key === state.chartMode ? ' active' : '');
+      btn.dataset.mode = mode.key;
+      btn.textContent = mode.label;
+      btn.addEventListener('click', () => {
+        state.chartMode = mode.key;
+        populateChartMetrics();
+        updateModeButtons();
+        drawChart();
+      });
+      modeBox.appendChild(btn);
+    });
+    populateChartMetrics();
+    $('chartMetric').addEventListener('change', e => {
+      state.chartMetric = e.target.value;
+      drawChart();
+    });
+  }
+
+  function initControls() {
+    const sortEl = $('sort');
+    SORTS.forEach(s => {
+      const o = document.createElement('option');
+      o.value = s.key;
+      o.textContent = s.label;
+      sortEl.appendChild(o);
+    });
+    sortEl.value = state.sort;
+    sortEl.addEventListener('change', () => {
+      state.sort = sortEl.value;
+      render();
+    });
+    $('search').addEventListener('input', e => {
+      state.search = e.target.value.trim().toLowerCase();
+      render();
+    });
+    initChartControls();
+  }
+
+  function getSortedVideos() {
+    const videos = state.data ? state.data.videos : [];
+    const filtered = videos.filter(v => {
+      if (!state.search) return true;
+      return v.bvid.toLowerCase().includes(state.search) ||
+        (v.title || '').toLowerCase().includes(state.search);
+    });
+    if (state.sort === 'default') return filtered;
+    return [...filtered].sort((a, b) => (Number(b[state.sort]) || 0) - (Number(a[state.sort]) || 0));
+  }
+
+  function renderSummary() {
+    const videos = state.data ? state.data.videos : [];
+    const totalView = sum(videos, 'view');
+    const totalReply = sum(videos, 'reply');
+    const totalLike = sum(videos, 'like');
+    const totalCoin = sum(videos, 'coin');
+    const totalFavorite = sum(videos, 'favorite');
+    const totalShare = sum(videos, 'share');
+    const pct = n => totalView ? (n / totalView * 100).toFixed(2) + '%' : '-';
+    const cards = [
+      ['视频数', videos.length],
+      ['总播放', fmt(totalView)],
+      ['总评论', fmt(totalReply)],
+      ['平均评论率', pct(totalReply)],
+      ['平均点赞率', pct(totalLike)],
+      ['平均投币率', pct(totalCoin)],
+      ['平均收藏率', pct(totalFavorite)],
+      ['平均分享率', pct(totalShare)]
+    ];
+    $('summary').innerHTML = cards.map(c =>
+      '<div class="card"><div class="card-label">' + c[0] + '</div><div class="card-value">' + c[1] + '</div></div>'
+    ).join('');
+  }
+
+  function renderTable(videos) {
+    const body = $('tableBody');
+    if (!videos.length) {
+      body.innerHTML = '<tr><td colspan="18" class="empty">暂无数据</td></tr>';
+      return;
+    }
+    body.innerHTML = videos.map((v, i) => {
+      const title = escapeHtml(v.title || '');
+      const active = v.bvid === state.selected ? ' class="active"' : '';
+      return '<tr' + active + ' data-bvid="' + escapeHtml(v.bvid) + '">' +
+        '<td class="idx">' + (i + 1) + '</td>' +
+        '<td class="bv">' + escapeHtml(v.bvid) + '</td>' +
+        '<td class="title-cell" title="' + title + '">' + title + '</td>' +
+        '<td>' + fmt(v.view) + '</td>' +
+        '<td>' + fmt(v.reply) + '</td>' +
+        '<td>' + fmt(v.like) + '</td>' +
+        '<td>' + fmt(v.coin) + '</td>' +
+        '<td>' + fmt(v.favorite) + '</td>' +
+        '<td>' + fmt(v.share) + '</td>' +
+        '<td>' + fmt(v.hourlyView) + '</td>' +
+        '<td>' + fmt(v.todayView) + '</td>' +
+        '<td>' + fmt(v.publishedDays) + '</td>' +
+        '<td>' + fmt(v.dailyAvg) + '</td>' +
+        '<td>' + fmtPct(v.replyRate) + '</td>' +
+        '<td>' + fmtPct(v.likeRate) + '</td>' +
+        '<td>' + fmtPct(v.coinRate) + '</td>' +
+        '<td>' + fmtPct(v.favoriteRate) + '</td>' +
+        '<td>' + fmtPct(v.shareRate) + '</td>' +
+        '</tr>';
+    }).join('');
+  }
+
+  function render() {
+    if (!state.data) return;
+    const videos = state.data.videos || [];
+    if (!state.selected && videos.length) state.selected = videos[0].bvid;
+    renderSummary();
+    renderTable(getSortedVideos());
+    drawChart();
+    $('updatedAt').textContent = '更新于 ' + (state.data.updatedAt || '-');
+  }
+
+  function dayDiffFromPublish(day, publishDate) {
+    if (!publishDate) return 0;
+    const start = new Date(day + 'T00:00:00');
+    const publish = new Date(publishDate + 'T00:00:00');
+    return Math.floor((start - publish) / 86400000) + 1;
+  }
+
+  function getChartSeries(video) {
+    const history = video.history || [];
+    if (state.chartMode === 'delta') {
+      const labels = [];
+      const values = [];
+      for (let i = 1; i < history.length; i++) {
+        const prev = history[i - 1];
+        const cur = history[i];
+        values.push((Number(cur[state.chartMetric]) || 0) - (Number(prev[state.chartMetric]) || 0));
+        labels.push(String(cur.time || '').slice(5, 16));
+      }
+      return { labels, values, isRate: false };
+    }
+    if (state.chartMode === 'rate') {
+      const baseMap = {
+        replyRate: 'reply',
+        likeRate: 'like',
+        coinRate: 'coin',
+        favoriteRate: 'favorite',
+        shareRate: 'share'
+      };
+      const baseKey = baseMap[state.chartMetric] || 'reply';
+      const labels = [];
+      const values = [];
+      for (const p of history) {
+        const view = Number(p.view) || 0;
+        values.push(view > 0 ? (Number(p[baseKey]) || 0) / view * 100 : 0);
+        labels.push(String(p.time || '').slice(5, 16));
+      }
+      return { labels, values, isRate: true };
+    }
+    const byDay = new Map();
+    for (const p of history) {
+      const day = String(p.time || '').slice(0, 10);
+      if (day) byDay.set(day, p);
+    }
+    const days = [...byDay.keys()];
+    const labels = days.map(d => d.slice(5));
+    const values = days.map(day => {
+      const p = byDay.get(day);
+      const daysSince = dayDiffFromPublish(day, video.publishDate);
+      return daysSince > 0 ? (Number(p.view) || 0) / daysSince : 0;
+    });
+    return { labels, values, isRate: false };
+  }
+
+  function drawChart() {
+    const canvas = $('chart');
+    const ctx = canvas.getContext('2d');
+    const dpr = window.devicePixelRatio || 1;
+    const w = canvas.clientWidth || 900;
+    const h = 280;
+    canvas.width = Math.round(w * dpr);
+    canvas.height = Math.round(h * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    ctx.clearRect(0, 0, w, h);
+
+    const mode = CHART_MODES.find(m => m.key === state.chartMode) || CHART_MODES[0];
+    const metric = getChartMetrics().find(m => m.key === state.chartMetric) || getChartMetrics()[0];
+    $('chartTitle').textContent = mode.label + ' · ' + metric.label;
+    const video = state.data && state.data.videos.find(v => v.bvid === state.selected);
+    $('chartVideo').textContent = video ? video.bvid + ' · ' + (video.title || '') : '';
+
+    if (!video || !video.history || video.history.length === 0) {
+      ctx.fillStyle = '#71808a';
+      ctx.font = '14px sans-serif';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText('暂无数据', w / 2, h / 2);
+      return;
+    }
+
+    const series = getChartSeries(video);
+    const values = series.values;
+    const labels = series.labels;
+    if (values.length === 0) {
+      ctx.fillStyle = '#71808a';
+      ctx.font = '14px sans-serif';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText('暂无数据', w / 2, h / 2);
+      return;
+    }
+    const left = 64;
+    const right = 18;
+    const top = 18;
+    const bottom = 30;
+    const plotW = w - left - right;
+    const plotH = h - top - bottom;
+
+    let min = Math.min(...values);
+    let max = Math.max(...values);
+    if (min === max) {
+      min -= 1;
+      max += 1;
+    }
+    const range = max - min;
+    min -= range * 0.08;
+    max += range * 0.08;
+
+    const x = i => values.length === 1 ? left + plotW / 2 : left + (i / (values.length - 1)) * plotW;
+    const y = v => top + (1 - (v - min) / (max - min)) * plotH;
+
+    ctx.lineWidth = 1;
+    ctx.strokeStyle = '#e6ecef';
+    ctx.font = '11px sans-serif';
+    ctx.textBaseline = 'middle';
+    ctx.textAlign = 'right';
+    const ticks = 4;
+    for (let i = 0; i <= ticks; i++) {
+      const val = min + (max - min) * i / ticks;
+      const yy = y(val);
+      ctx.beginPath();
+      ctx.moveTo(left, yy);
+      ctx.lineTo(left + plotW, yy);
+      ctx.stroke();
+      ctx.fillStyle = '#71808a';
+      ctx.fillText(fmtAxisValue(val, series.isRate), left - 8, yy);
+    }
+
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'top';
+    const labelIndexes = values.length === 1 ? [0] : [0, Math.floor((values.length - 1) / 2), values.length - 1];
+    labelIndexes.forEach(i => {
+      ctx.fillStyle = '#71808a';
+      ctx.fillText(labels[i], x(i), top + plotH + 8);
+    });
+
+    ctx.beginPath();
+    values.forEach((v, i) => {
+      if (i === 0) ctx.moveTo(x(i), y(v));
+      else ctx.lineTo(x(i), y(v));
+    });
+    ctx.strokeStyle = '#0f9d8f';
+    ctx.lineWidth = 2;
+    ctx.lineJoin = 'round';
+    ctx.stroke();
+
+    values.forEach((v, i) => {
+      ctx.beginPath();
+      ctx.arc(x(i), y(v), i === values.length - 1 ? 4.5 : 2.5, 0, Math.PI * 2);
+      ctx.fillStyle = i === values.length - 1 ? '#d97706' : '#0f9d8f';
+      ctx.fill();
+    });
+  }
+
+  async function loadData() {
+    try {
+      const res = await fetch('data.json?ts=' + Date.now(), { cache: 'no-store' });
+      const json = await res.json();
+      state.data = json;
+      render();
+    } catch (err) {
+      $('updatedAt').textContent = '数据暂不可用';
+    }
+  }
+
+  $('tableBody').addEventListener('click', e => {
+    const tr = e.target.closest('tr[data-bvid]');
+    if (!tr) return;
+    state.selected = tr.getAttribute('data-bvid');
+    renderTable(getSortedVideos());
+    drawChart();
+  });
+
+  window.addEventListener('resize', () => drawChart());
+  initControls();
+  loadData();
+  setInterval(loadData, 60000);
+})();
+</script>
+</body>
+</html>
