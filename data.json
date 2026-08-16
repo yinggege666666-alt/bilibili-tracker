@@ -530,7 +530,7 @@
                        "coin":  3812,
                        "favorite":  2689,
                        "share":  704,
-                       "hourlyView":  2,
+                       "hourlyView":  0,
                        "todayView":  8,
                        "publishedDays":  31,
                        "publishDate":  "2026-07-18",
@@ -1092,6 +1092,15 @@
                                        },
                                        {
                                            "time":  "2026-08-17 03:00",
+                                           "view":  90049,
+                                           "reply":  1453,
+                                           "like":  2337,
+                                           "coin":  3812,
+                                           "favorite":  2689,
+                                           "share":  704
+                                       },
+                                       {
+                                           "time":  "2026-08-17 04:00",
                                            "view":  90049,
                                            "reply":  1453,
                                            "like":  2337,
@@ -1754,21 +1763,21 @@
                    {
                        "bvid":  "BV1cbuw6eE16",
                        "title":  "【秋叶ComfyUI】秋叶最新发布！ComfyUI 中文满血整合包来了！支持50 40 30系显卡，Win+Mac一键下载安装（附新Comfyui整合包）",
-                       "view":  20902,
+                       "view":  21024,
                        "reply":  25,
                        "like":  263,
                        "coin":  499,
                        "favorite":  259,
                        "share":  124,
-                       "hourlyView":  309,
-                       "todayView":  439,
+                       "hourlyView":  122,
+                       "todayView":  561,
                        "publishedDays":  14,
                        "publishDate":  "2026-08-04",
-                       "dailyAvg":  1493,
+                       "dailyAvg":  1502,
                        "replyRate":  0.12,
-                       "likeRate":  1.26,
-                       "coinRate":  2.39,
-                       "favoriteRate":  1.24,
+                       "likeRate":  1.25,
+                       "coinRate":  2.37,
+                       "favoriteRate":  1.23,
                        "shareRate":  0.59,
                        "history":  [
                                        {
@@ -2314,6 +2323,15 @@
                                        {
                                            "time":  "2026-08-17 03:00",
                                            "view":  20902,
+                                           "reply":  25,
+                                           "like":  263,
+                                           "coin":  499,
+                                           "favorite":  259,
+                                           "share":  124
+                                       },
+                                       {
+                                           "time":  "2026-08-17 04:00",
+                                           "view":  21024,
                                            "reply":  25,
                                            "like":  263,
                                            "coin":  499,
@@ -3153,6 +3171,15 @@
                                        },
                                        {
                                            "time":  "2026-08-17 03:00",
+                                           "view":  51335,
+                                           "reply":  157,
+                                           "like":  159,
+                                           "coin":  262,
+                                           "favorite":  158,
+                                           "share":  134
+                                       },
+                                       {
+                                           "time":  "2026-08-17 04:00",
                                            "view":  51335,
                                            "reply":  157,
                                            "like":  159,
