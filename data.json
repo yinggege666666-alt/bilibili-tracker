@@ -524,14 +524,14 @@
                    {
                        "bvid":  "BV1NfKw6AEeo",
                        "title":  "8月【ComfyUI中文旗舰】全新发布！ai绘画ai视频一键生成，适配20/30/40/50系显卡，Win+Mac一键安装解压即用无私传递（附整合包+工作流）",
-                       "view":  105583,
+                       "view":  105592,
                        "reply":  1458,
                        "like":  2474,
                        "coin":  4069,
                        "favorite":  2837,
                        "share":  755,
-                       "hourlyView":  2,
-                       "todayView":  11,
+                       "hourlyView":  9,
+                       "todayView":  20,
                        "publishedDays":  37,
                        "publishDate":  "2026-07-18",
                        "dailyAvg":  2854,
@@ -1872,6 +1872,15 @@
                                            "coin":  4069,
                                            "favorite":  2837,
                                            "share":  755
+                                       },
+                                       {
+                                           "time":  "2026-08-23 15:00",
+                                           "view":  105592,
+                                           "reply":  1458,
+                                           "like":  2474,
+                                           "coin":  4069,
+                                           "favorite":  2837,
+                                           "share":  755
                                        }
                                    ]
                    },
@@ -2528,14 +2537,14 @@
                    {
                        "bvid":  "BV1cbuw6eE16",
                        "title":  "【秋叶ComfyUI】秋叶最新发布！ComfyUI 中文满血整合包来了！支持50 40 30系显卡，Win+Mac一键下载安装（附新Comfyui整合包）",
-                       "view":  21532,
+                       "view":  21533,
                        "reply":  39,
                        "like":  273,
                        "coin":  519,
                        "favorite":  271,
                        "share":  124,
-                       "hourlyView":  0,
-                       "todayView":  0,
+                       "hourlyView":  1,
+                       "todayView":  1,
                        "publishedDays":  20,
                        "publishDate":  "2026-08-04",
                        "dailyAvg":  1077,
@@ -3862,6 +3871,15 @@
                                        {
                                            "time":  "2026-08-23 13:00",
                                            "view":  21532,
+                                           "reply":  39,
+                                           "like":  273,
+                                           "coin":  519,
+                                           "favorite":  271,
+                                           "share":  124
+                                       },
+                                       {
+                                           "time":  "2026-08-23 15:00",
+                                           "view":  21533,
                                            "reply":  39,
                                            "like":  273,
                                            "coin":  519,
@@ -5475,6 +5493,15 @@
                                        },
                                        {
                                            "time":  "2026-08-23 13:00",
+                                           "view":  51345,
+                                           "reply":  158,
+                                           "like":  159,
+                                           "coin":  262,
+                                           "favorite":  158,
+                                           "share":  134
+                                       },
+                                       {
+                                           "time":  "2026-08-23 15:00",
                                            "view":  51345,
                                            "reply":  158,
                                            "like":  159,
