@@ -524,17 +524,17 @@
                    {
                        "bvid":  "BV1NfKw6AEeo",
                        "title":  "8月【ComfyUI中文旗舰】全新发布！ai绘画ai视频一键生成，适配20/30/40/50系显卡，Win+Mac一键安装解压即用无私传递（附整合包+工作流）",
-                       "view":  105618,
-                       "reply":  1463,
+                       "view":  105621,
+                       "reply":  1464,
                        "like":  2475,
                        "coin":  4069,
                        "favorite":  2837,
                        "share":  755,
-                       "hourlyView":  7,
-                       "todayView":  11,
+                       "hourlyView":  3,
+                       "todayView":  14,
                        "publishedDays":  38,
                        "publishDate":  "2026-07-18",
-                       "dailyAvg":  2779,
+                       "dailyAvg":  2780,
                        "replyRate":  1.39,
                        "likeRate":  2.34,
                        "coinRate":  3.85,
@@ -2003,6 +2003,15 @@
                                            "time":  "2026-08-24 11:00",
                                            "view":  105618,
                                            "reply":  1463,
+                                           "like":  2475,
+                                           "coin":  4069,
+                                           "favorite":  2837,
+                                           "share":  755
+                                       },
+                                       {
+                                           "time":  "2026-08-24 13:00",
+                                           "view":  105621,
+                                           "reply":  1464,
                                            "like":  2475,
                                            "coin":  4069,
                                            "favorite":  2837,
@@ -4137,6 +4146,15 @@
                                            "coin":  519,
                                            "favorite":  271,
                                            "share":  124
+                                       },
+                                       {
+                                           "time":  "2026-08-24 13:00",
+                                           "view":  21535,
+                                           "reply":  39,
+                                           "like":  273,
+                                           "coin":  519,
+                                           "favorite":  271,
+                                           "share":  124
                                        }
                                    ]
                    },
@@ -5880,6 +5898,15 @@
                                        },
                                        {
                                            "time":  "2026-08-24 11:00",
+                                           "view":  51345,
+                                           "reply":  158,
+                                           "like":  159,
+                                           "coin":  262,
+                                           "favorite":  158,
+                                           "share":  134
+                                       },
+                                       {
+                                           "time":  "2026-08-24 13:00",
                                            "view":  51345,
                                            "reply":  158,
                                            "like":  159,
