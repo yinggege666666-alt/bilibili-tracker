@@ -530,7 +530,7 @@
                        "coin":  4069,
                        "favorite":  2840,
                        "share":  755,
-                       "hourlyView":  1,
+                       "hourlyView":  0,
                        "todayView":  26,
                        "publishedDays":  43,
                        "publishDate":  "2026-07-18",
@@ -2370,6 +2370,15 @@
                                        },
                                        {
                                            "time":  "2026-08-29 16:00",
+                                           "view":  105759,
+                                           "reply":  1467,
+                                           "like":  2478,
+                                           "coin":  4069,
+                                           "favorite":  2840,
+                                           "share":  755
+                                       },
+                                       {
+                                           "time":  "2026-08-29 17:00",
                                            "view":  105759,
                                            "reply":  1467,
                                            "like":  2478,
@@ -4875,6 +4884,15 @@
                                            "coin":  519,
                                            "favorite":  271,
                                            "share":  124
+                                       },
+                                       {
+                                           "time":  "2026-08-29 17:00",
+                                           "view":  21540,
+                                           "reply":  40,
+                                           "like":  273,
+                                           "coin":  519,
+                                           "favorite":  271,
+                                           "share":  124
                                        }
                                    ]
                    },
@@ -6987,6 +7005,15 @@
                                        },
                                        {
                                            "time":  "2026-08-29 16:00",
+                                           "view":  51345,
+                                           "reply":  158,
+                                           "like":  159,
+                                           "coin":  262,
+                                           "favorite":  158,
+                                           "share":  134
+                                       },
+                                       {
+                                           "time":  "2026-08-29 17:00",
                                            "view":  51345,
                                            "reply":  158,
                                            "like":  159,
