@@ -530,11 +530,11 @@
                        "coin":  4069,
                        "favorite":  2841,
                        "share":  755,
-                       "hourlyView":  2,
-                       "todayView":  23,
-                       "publishedDays":  44,
+                       "hourlyView":  0,
+                       "todayView":  0,
+                       "publishedDays":  45,
                        "publishDate":  "2026-07-18",
-                       "dailyAvg":  2404,
+                       "dailyAvg":  2351,
                        "replyRate":  1.39,
                        "likeRate":  2.34,
                        "coinRate":  3.85,
@@ -2655,6 +2655,15 @@
                                            "coin":  4069,
                                            "favorite":  2841,
                                            "share":  755
+                                       },
+                                       {
+                                           "time":  "2026-08-31 00:00",
+                                           "view":  105789,
+                                           "reply":  1468,
+                                           "like":  2478,
+                                           "coin":  4069,
+                                           "favorite":  2841,
+                                           "share":  755
                                        }
                                    ]
                    },
@@ -3318,10 +3327,10 @@
                        "favorite":  271,
                        "share":  124,
                        "hourlyView":  0,
-                       "todayView":  2,
-                       "publishedDays":  27,
+                       "todayView":  0,
+                       "publishedDays":  28,
                        "publishDate":  "2026-08-04",
-                       "dailyAvg":  798,
+                       "dailyAvg":  769,
                        "replyRate":  0.19,
                        "likeRate":  1.27,
                        "coinRate":  2.41,
@@ -5433,6 +5442,15 @@
                                            "coin":  519,
                                            "favorite":  271,
                                            "share":  124
+                                       },
+                                       {
+                                           "time":  "2026-08-31 00:00",
+                                           "view":  21543,
+                                           "reply":  41,
+                                           "like":  273,
+                                           "coin":  519,
+                                           "favorite":  271,
+                                           "share":  124
                                        }
                                    ]
                    },
@@ -5707,9 +5725,9 @@
                        "share":  134,
                        "hourlyView":  0,
                        "todayView":  0,
-                       "publishedDays":  67,
+                       "publishedDays":  68,
                        "publishDate":  "2026-06-25",
-                       "dailyAvg":  766,
+                       "dailyAvg":  755,
                        "replyRate":  0.31,
                        "likeRate":  0.31,
                        "coinRate":  0.51,
@@ -7824,6 +7842,15 @@
                                        },
                                        {
                                            "time":  "2026-08-30 23:00",
+                                           "view":  51345,
+                                           "reply":  158,
+                                           "like":  159,
+                                           "coin":  262,
+                                           "favorite":  158,
+                                           "share":  134
+                                       },
+                                       {
+                                           "time":  "2026-08-31 00:00",
                                            "view":  51345,
                                            "reply":  158,
                                            "like":  159,
