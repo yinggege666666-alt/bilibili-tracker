@@ -2592,6 +2592,15 @@
                                            "coin":  4069,
                                            "favorite":  2841,
                                            "share":  755
+                                       },
+                                       {
+                                           "time":  "2026-08-30 17:00",
+                                           "view":  105775,
+                                           "reply":  1468,
+                                           "like":  2478,
+                                           "coin":  4069,
+                                           "favorite":  2841,
+                                           "share":  755
                                        }
                                    ]
                    },
@@ -3248,14 +3257,14 @@
                    {
                        "bvid":  "BV1cbuw6eE16",
                        "title":  "【秋叶ComfyUI】秋叶最新发布！ComfyUI 中文满血整合包来了！支持50 40 30系显卡，Win+Mac一键下载安装（附新Comfyui整合包）",
-                       "view":  21542,
+                       "view":  21543,
                        "reply":  41,
                        "like":  273,
                        "coin":  519,
                        "favorite":  271,
                        "share":  124,
-                       "hourlyView":  0,
-                       "todayView":  1,
+                       "hourlyView":  1,
+                       "todayView":  2,
                        "publishedDays":  27,
                        "publishDate":  "2026-08-04",
                        "dailyAvg":  798,
@@ -5302,6 +5311,15 @@
                                        {
                                            "time":  "2026-08-30 16:00",
                                            "view":  21542,
+                                           "reply":  41,
+                                           "like":  273,
+                                           "coin":  519,
+                                           "favorite":  271,
+                                           "share":  124
+                                       },
+                                       {
+                                           "time":  "2026-08-30 17:00",
+                                           "view":  21543,
                                            "reply":  41,
                                            "like":  273,
                                            "coin":  519,
@@ -7635,6 +7653,15 @@
                                        },
                                        {
                                            "time":  "2026-08-30 16:00",
+                                           "view":  51345,
+                                           "reply":  158,
+                                           "like":  159,
+                                           "coin":  262,
+                                           "favorite":  158,
+                                           "share":  134
+                                       },
+                                       {
+                                           "time":  "2026-08-30 17:00",
                                            "view":  51345,
                                            "reply":  158,
                                            "like":  159,
