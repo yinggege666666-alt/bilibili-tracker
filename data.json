@@ -3616,9 +3616,9 @@
                        "share":  124,
                        "hourlyView":  0,
                        "todayView":  0,
-                       "publishedDays":  29,
+                       "publishedDays":  31,
                        "publishDate":  "2026-08-04",
-                       "dailyAvg":  743,
+                       "dailyAvg":  695,
                        "replyRate":  0.19,
                        "likeRate":  1.27,
                        "coinRate":  2.41,
@@ -6021,6 +6021,15 @@
                                        },
                                        {
                                            "time":  "2026-09-01 11:00",
+                                           "view":  21543,
+                                           "reply":  41,
+                                           "like":  273,
+                                           "coin":  519,
+                                           "favorite":  271,
+                                           "share":  124
+                                       },
+                                       {
+                                           "time":  "2026-09-03 04:00",
                                            "view":  21543,
                                            "reply":  41,
                                            "like":  273,
