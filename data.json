@@ -524,21 +524,21 @@
                    {
                        "bvid":  "BV1NfKw6AEeo",
                        "title":  "8月【ComfyUI中文旗舰】全新发布！ai绘画ai视频一键生成，适配20/30/40/50系显卡，Win+Mac一键安装解压即用无私传递（附整合包+工作流）",
-                       "view":  105806,
+                       "view":  105842,
                        "reply":  1470,
                        "like":  2479,
                        "coin":  4069,
-                       "favorite":  2841,
+                       "favorite":  2840,
                        "share":  755,
-                       "hourlyView":  1,
-                       "todayView":  7,
-                       "publishedDays":  46,
+                       "hourlyView":  36,
+                       "todayView":  36,
+                       "publishedDays":  48,
                        "publishDate":  "2026-07-18",
-                       "dailyAvg":  2300,
+                       "dailyAvg":  2205,
                        "replyRate":  1.39,
                        "likeRate":  2.34,
-                       "coinRate":  3.85,
-                       "favoriteRate":  2.69,
+                       "coinRate":  3.84,
+                       "favoriteRate":  2.68,
                        "shareRate":  0.71,
                        "history":  [
                                        {
@@ -2951,6 +2951,15 @@
                                            "like":  2479,
                                            "coin":  4069,
                                            "favorite":  2841,
+                                           "share":  755
+                                       },
+                                       {
+                                           "time":  "2026-09-03 14:00",
+                                           "view":  105842,
+                                           "reply":  1470,
+                                           "like":  2479,
+                                           "coin":  4069,
+                                           "favorite":  2840,
                                            "share":  755
                                        }
                                    ]
