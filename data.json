@@ -6347,17 +6347,17 @@
                    {
                        "bvid":  "BV15c7h6REzw",
                        "title":  "【八月 ComfyUI】最新发布！支持20/30/40/50系显卡，ComfyUI V10中文整合包来了！Win+Mac一键安装（附Comfyui整合包）",
-                       "view":  51354,
+                       "view":  51359,
                        "reply":  158,
                        "like":  160,
                        "coin":  262,
-                       "favorite":  159,
+                       "favorite":  158,
                        "share":  134,
-                       "hourlyView":  3,
-                       "todayView":  3,
-                       "publishedDays":  102,
+                       "hourlyView":  5,
+                       "todayView":  5,
+                       "publishedDays":  126,
                        "publishDate":  "2026-06-25",
-                       "dailyAvg":  503,
+                       "dailyAvg":  408,
                        "replyRate":  0.31,
                        "likeRate":  0.31,
                        "coinRate":  0.51,
@@ -8810,6 +8810,15 @@
                                            "like":  160,
                                            "coin":  262,
                                            "favorite":  159,
+                                           "share":  134
+                                       },
+                                       {
+                                           "time":  "2026-10-28 12:00",
+                                           "view":  51359,
+                                           "reply":  158,
+                                           "like":  160,
+                                           "coin":  262,
+                                           "favorite":  158,
                                            "share":  134
                                        }
                                    ]
