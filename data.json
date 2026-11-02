@@ -530,7 +530,7 @@
                        "coin":  4112,
                        "favorite":  2856,
                        "share":  779,
-                       "hourlyView":  66,
+                       "hourlyView":  0,
                        "todayView":  66,
                        "publishedDays":  108,
                        "publishDate":  "2026-07-18",
@@ -2982,6 +2982,15 @@
                                        },
                                        {
                                            "time":  "2026-11-02 08:00",
+                                           "view":  108930,
+                                           "reply":  1486,
+                                           "like":  2501,
+                                           "coin":  4112,
+                                           "favorite":  2856,
+                                           "share":  779
+                                       },
+                                       {
+                                           "time":  "2026-11-02 15:00",
                                            "view":  108930,
                                            "reply":  1486,
                                            "like":  2501,
