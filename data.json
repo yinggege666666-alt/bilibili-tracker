@@ -524,20 +524,20 @@
                    {
                        "bvid":  "BV1NfKw6AEeo",
                        "title":  "8月【ComfyUI中文旗舰】全新发布！ai绘画ai视频一键生成，适配20/30/40/50系显卡，Win+Mac一键安装解压即用无私传递（附整合包+工作流）",
-                       "view":  108864,
-                       "reply":  1484,
+                       "view":  108930,
+                       "reply":  1486,
                        "like":  2501,
                        "coin":  4112,
-                       "favorite":  2857,
+                       "favorite":  2856,
                        "share":  779,
-                       "hourlyView":  355,
-                       "todayView":  355,
-                       "publishedDays":  99,
+                       "hourlyView":  66,
+                       "todayView":  66,
+                       "publishedDays":  108,
                        "publishDate":  "2026-07-18",
-                       "dailyAvg":  1100,
+                       "dailyAvg":  1009,
                        "replyRate":  1.36,
                        "likeRate":  2.3,
-                       "coinRate":  3.78,
+                       "coinRate":  3.77,
                        "favoriteRate":  2.62,
                        "shareRate":  0.72,
                        "history":  [
@@ -2978,6 +2978,15 @@
                                            "like":  2501,
                                            "coin":  4112,
                                            "favorite":  2857,
+                                           "share":  779
+                                       },
+                                       {
+                                           "time":  "2026-11-02 08:00",
+                                           "view":  108930,
+                                           "reply":  1486,
+                                           "like":  2501,
+                                           "coin":  4112,
+                                           "favorite":  2856,
                                            "share":  779
                                        }
                                    ]
